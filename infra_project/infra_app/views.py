@@ -9,7 +9,6 @@ def index(request):
         status=HTTPStatus.OK
     )
 
-
 def second_page(request):
     return HttpResponse(
         'А это вторая страница',
