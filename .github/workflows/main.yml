@@ -78,7 +78,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull antonysan/actions:latest
+          sudo docker pull antonysan/actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 antonysan/actions:latest
+          sudo docker run --rm -d -p 5000:5000 antonysan/actions
