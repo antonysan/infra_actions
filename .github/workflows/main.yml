@@ -77,9 +77,10 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           # key: ${{ secrets.SSH_KEY }}
-          script: |
+          script: whoimi
+          # script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull antonysan/actions
+            # sudo docker pull antonysan/actions
             #остановка всех контейнеров
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 antonysan/actions
+            # sudo docker stop $(sudo docker ps -a -q)
+            # sudo docker run --rm -d -p 5000:5000 antonysan/actions
